@@ -1,7 +1,7 @@
 resource "aws_instance" "name" {
-  ami           = "ami-0f918f7e67a3323f0"
+  ami           = var.ami
   key_name      = aws_key_pair.name.key_name
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
   tags = {
     Name = "${var.project}-instance"
   }
