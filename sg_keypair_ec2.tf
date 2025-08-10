@@ -62,7 +62,7 @@ resource "aws_instance" "name" {
       "sudo apt update -y",
       "sudo apt-get install -y python3-pip",
       "sudo apt install python3-flask -y",
-      "nohup sudo python3 /home/ubuntu/app.py > /home/ubuntu/app.log 2>&1 &"
+      "sudo bash -c 'nohup python3 /home/ubuntu/app.py > /home/ubuntu/app.log 2>&1 &'"
     ]
   }
 }
