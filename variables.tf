@@ -17,3 +17,13 @@ variable "availability_zone" {
   description = "availability zone name"
   type        = string
 }
+
+variable "instance_type" {
+  description = "type of the instance"
+  type        = string
+}
+
+variable "ami" {
+  description = "ami id"
+  type        = string
+}
