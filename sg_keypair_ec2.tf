@@ -50,11 +50,11 @@ resource "aws_instance" "name" {
   connection {
     user        = "ubuntu"
     type        = "ssh"
-    private_key = file("/terraform-prac/test/id_rsa")
+    private_key = file("./keys/id_rsa")
     host        = self.public_ip
   }
   provisioner "file" {
-    source      = "/terraform-prac/test/python-app/app.py"
+    source      = "./python-app/app.py"
     destination = "/home/ubuntu/app.py"
   }
   provisioner "remote-exec" {
